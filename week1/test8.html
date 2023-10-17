@@ -1,0 +1,54 @@
+<!-- ## Task 8: Rotate By 90
+Input
+1 2 3 4
+5 6 7 8
+1 2 3 4
+5 6 7 8
+Output
+4 8 4 8
+3 7 3 7
+2 6 2 6
+1 5 1 5 -->
+<script>
+
+var inputMatrix = [
+[1, 2, 3, 4],
+[5, 6, 7,8],
+[1, 2, 3, 4],
+[5, 6, 7,8],
+];
+
+function rotateMatrix90(matrix) {
+    if (!matrix || matrix.length === 0) {
+        return [];
+    }
+
+    const rows = matrix.length;
+    const cols = matrix[0].length;
+
+    const rotatedMatrix = new Array(cols);
+    for (let i = 0; i < cols; i++) {
+        rotatedMatrix[i] = new Array(rows);
+    }
+
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            rotatedMatrix[j][rows - 1 - i] = matrix[i][j];
+        }
+    }
+
+    return rotatedMatrix;
+}
+
+function printMatrix(matrix) {
+    for (let i = 0; i < matrix.length; i++) {
+        const row = matrix[i];
+        console.log(row.join(' '));
+    }
+}
+
+const outputMatrix = rotateMatrix90(inputMatrix);
+
+printMatrix(outputMatrix);
+
+</script>

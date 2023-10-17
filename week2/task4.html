@@ -1,0 +1,32 @@
+<script>
+
+function near(nums, target) {
+  nums.sort((a, b) => a - b);
+  let left = 0;
+  let right = nums.length - 1;
+  let max = Infinity;
+  let min = Infinity;
+
+  while (left < right) {
+    const currentSum = nums[left] + nums[right];
+    const currnt = Math.abs(target - currentSum);
+
+    if (currnt < min) {
+      min = currnt;
+      max = currentSum;
+    }
+
+    if (currentSum < target) {
+      left++;
+    } else {
+      right--;
+    }
+  }
+
+  return max;
+}
+const nums = [1, 2, 4, 8, 16];
+const target = 10;
+const max = near(nums, target);
+console.log(max); 
+</script>

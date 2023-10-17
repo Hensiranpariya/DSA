@@ -1,0 +1,27 @@
+<script>
+
+function find_two_sum(num, target) {
+  const max = {};
+
+  for (let i = 0; i < num.length; i++) {
+    const curnum = num[i];
+    const sum = target - curnum;
+
+
+    if (sum in max) {
+      return [max[sum], i];
+    }
+
+    max[curnum] = i;
+  }
+
+
+  return [];
+}
+
+
+const num = [2, 7, 11, 15];
+const target = 9;
+const result = find_two_sum(num, target);
+console.log(result); 
+</script>

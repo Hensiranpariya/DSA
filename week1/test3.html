@@ -1,0 +1,51 @@
+<script>
+    // Rotate the Array by k
+    // arr = [1, 2, 4, 5, 6, 7]
+    // k = 1
+    // output = [7, 1, 2, 4, 5, 6]
+
+    var arr = [1, 2, 4, 5, 6, 7];
+    var  k =1;
+
+    let abc = [];
+
+    abc.push(arr[arr.length-1]);
+    for(let i =0; i<arr.length-1; i++){
+        abc.push(arr[i]);
+    }
+    console.log(abc);
+
+    // function rotateArray(arr, k) {
+    // var hello= arr.slice(-k).concat(arr.slice(0, -k));
+    // console.log(hello)
+    // }
+    // rotateArray(arr,k);
+
+</script>
+<script>
+    // Rotate the Array by k
+    // arr = [1, 2, 4, 5, 6, 7]
+    // k = 2
+    // output = [6, 7, 1, 2, 4, 5]
+
+    var arr = [1, 2, 4, 5, 6, 7]
+    var  k = 2;
+    var xyz=[];
+
+    xyz.push(arr[4]);
+    xyz.push(arr[5]);
+    
+    for(var i=0; i<arr.length-2; i++) {
+        xyz.push(arr[i]);
+    }
+    console.log(xyz);
+
+
+    // xyz.push(arr[arr.length-2]);
+    // for(let i =0; i<arr.length-1; i++){
+    //     xyz.push(arr[i]);
+    // }
+    // console.log(xyz);
+
+
+</script>

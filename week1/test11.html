@@ -1,0 +1,30 @@
+<script>
+
+const inputMatrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+function printMatrixBoundary(matrix) {
+    if (!matrix || matrix.length === 0) {
+        return;
+    }
+
+    const rows = matrix.length;
+    const cols = matrix[0].length;
+
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            if (i === 0 || i === rows - 1 || j === 0 || j === cols - 1) {
+                console.log(matrix[i][j]);
+            }
+        }
+    }
+}
+
+
+
+printMatrixBoundary(inputMatrix);
+
+</script>

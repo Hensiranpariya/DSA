@@ -1,0 +1,29 @@
+<script>
+    function reverse(hello) {
+ 
+  const text = hello.split('');
+
+
+  let left = 0;
+  let right = text.length - 1;
+
+
+  while (left < right) {
+    const temp = text[left];
+    text[left] = text[right];
+    text[right] = temp;
+
+    left++;
+    right--;
+  }
+
+
+  const revstr = text.join('');
+
+  return revstr;
+}
+
+const hello = "Hello, World!";
+const abc = reverse(hello);
+console.log(abc);
+</script>
